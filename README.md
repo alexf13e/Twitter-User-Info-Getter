@@ -5,6 +5,7 @@ Program made for a friend who wanted to archive info about people they follow on
 so they can continue find them elsewhere
 
 # Example Input
+I believe they got this from a load of data you can find by requesting data twitter holds about you. I don't actually use twitter so idk...
 ```
 [
   {
