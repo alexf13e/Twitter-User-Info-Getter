@@ -12,13 +12,11 @@ client = tweepy.Client(secretthings.bearer_token)
 
 # load json file containing the account ids we want
 jsonData = []
-with open("following.json", "r") as file:
+with open("followingIDs.json", "r") as file:
     jsonData = json.load(file)
 
 # put account ids from file data into a list
-accountIds = []
-for jd in jsonData:
-    accountIds.append(jd["following"]["accountId"])
+accountIds = jsonData["ids"]
 
 outputData = [] # data which will be written to output file at end of program
 userFields = ["url", "description", "entities"] # need to specify extra info we want from twitter
@@ -112,5 +110,5 @@ outputData.sort(key=lambda x: x["displayname"])
 # along with ensure_ascii in json.dump
 # indent=4 specifies how the pretty printing will look, without it we just get
 # one giant line
-with open("newfollowing.json", "w", encoding='utf8') as file:
+with open("followingInfo.json", "w", encoding='utf8') as file:
     json.dump(outputData, file, indent=4, ensure_ascii=False)
