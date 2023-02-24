@@ -1,0 +1,45 @@
+
+h3
+{
+    text-align: center;
+}
+
+
+#dvMain
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#dvDetails
+{
+    position: relative;
+    background-color: white;
+    width: 50%;
+    height: 40%;
+    left: 24.5%;
+    top: 29.5%;
+    padding: 1%;
+    z-index: 2;
+}
+
+#dvDetailsBG
+{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(50, 50, 50, 0.7);
+}
+
+.item
+{
+    cursor: pointer;
+}
+
+.item:hover
+{
+    text-decoration: underline;
+}
