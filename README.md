@@ -2,32 +2,12 @@
 Takes in a list of twitter user IDs and outputs their handle, display name, description and links
 
 Program made for a friend who wanted to archive info about people they follow on Twitter before its seemingly inevitable demise,
-so they can continue find them elsewhere
+so they can continue find them elsewhere (though it looks like this program won't be usable much longer for free)
 
-# Example Input
-I believe they got this from a load of data you can find by requesting data twitter holds about you. I don't actually use twitter so idk...
-```
-[
-  {
-    "following" : {
-      "accountId" : "16747981",
-      "userLink" : "https://twitter.com/intent/user?user_id=16747981"
-    }
-  },
-  {
-    "following" : {
-      "accountId" : "18106205",
-      "userLink" : "https://twitter.com/intent/user?user_id=18106205"
-    }
-  },
-  {
-    "following" : {
-      "accountId" : "55793637",
-      "userLink" : "https://twitter.com/intent/user?user_id=55793637"
-    }
-  }
-]
-```
+# How to use
+First, set the userID in getFollowing.py to that of the user who is following the accounts you want the information about.
+Then run it, and it will create a json with a list of IDs of the followed accounts. This is then used by UserInfoGetter.py to create an output like the one below.
+I have included an example webpage made to display the information.
 
 # Example Output
 These are just ones I found in their list that didn't seem too "unsavoury"...
